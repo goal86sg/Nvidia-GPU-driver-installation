@@ -37,7 +37,14 @@ export PATH=/user/local/cuda-10.1/bin${PATH:+${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
 ```
-7. To Remove
+7. Compile Cuda Toolkit Samples
+```
+cd ~/NVIDIA_CUDA-10.1_Samples
+make
+cd ~/NVIDIA_CUDA-10.1_Samples/bin/x86_64/linux/releases/
+./deviceQuery
+```
+8. To Remove
 ```
 To remove CUDA Toolkit:
 $ sudo apt-get --purge remove "*cublas*" "*cufft*" "*curand*" \
